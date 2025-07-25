@@ -13,7 +13,7 @@ export default function Card({ productInfo }) {
   } = productInfo || {};
 
   return (
-    <div className=" md:w-80 sm:w-96 bg-white dark:bg-gray-800 shadow-xl rounded-xl overflow-hidden transition-transform transform hover:scale-105 duration-300">
+    <div className="  bg-white dark:bg-gray-800 shadow-xl rounded-xl overflow-hidden transition-transform transform hover:scale-105 duration-300">
       <img
         src={image}
         alt={`Image of ${title}`}
