@@ -7,6 +7,7 @@ export default function Home() {
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOption, setSortOption] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [darkMode, setDarkMode] = useState(false);
 
   async function getProducts() {
