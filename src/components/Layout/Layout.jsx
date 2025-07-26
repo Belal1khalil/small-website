@@ -22,7 +22,7 @@ export default function Layout() {
   return (
     <>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <div className="container w-[100%] pb-10 pt-20 min-h-[75vh] bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div className="container w-[100%] pb-10 pt-20 min-h-[75vh] dark:bg-gray-900 transition-colors duration-300">
         <Outlet></Outlet>
       </div>
       <Footer />

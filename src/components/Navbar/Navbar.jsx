@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 export default function Navbar({ darkMode, toggleDarkMode }) {
   return (
-    <nav className="bg-gray-800 py-3 shadow-sm mb-3">
+    <nav className="bg-gray-800 py-3 shadow-sm fixed top-0 left-0 w-full z-50 m">
       <div className="container text-white p-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">My Store</h1>
+        <h1 className="text-xl font-bold">E-commerce</h1>
 
         {/* <ul className="flex space-x-4">
           <li>
@@ -82,9 +82,9 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               aria-label="Toggle Dark Mode"
             >
               {darkMode ? (
-                <i className="fa-solid fa-sun text-yellow-500"></i> // وضع النهار
+                <i className="fa-solid fa-sun text-yellow-500"></i> 
               ) : (
-                <i className="fa-solid fa-moon text-white"></i> // وضع الليل
+                <i className="fa-solid fa-moon text-white"></i> 
               )}
             </button>
           </li>

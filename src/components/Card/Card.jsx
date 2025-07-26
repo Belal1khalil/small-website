@@ -24,7 +24,7 @@ export default function Card({ productInfo }) {
         <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200 truncate ">{title}</h2>
 
         <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
-          <span className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-0.5 rounded-full capitalize">
+          <span className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-0.5 rounded-full capitalize" >
             {category}
           </span>
           <span className="text-yellow-500 dark:text-yellow-400 font-medium">
@@ -32,7 +32,7 @@ export default function Card({ productInfo }) {
           </span>
         </div>
 
-        <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-3">{description}</p>
+        <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-4 ">{description}</p>
 
         <div className="flex items-center justify-between font-semibold">
           <span className="text-lg text-primary dark:text-primary">${price}</span>

@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../../components/Card/Card";
 import Loading from "../../components/Card/Loading/Loading";
+import HomeImage from "../../components/HomeImage/HomeImage";
+
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -56,13 +58,15 @@ export default function Home() {
 
   return (
     <>
+     <HomeImage/>
       <div className="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-3 sm:space-y-0 mb-6 px-4">
+       
         <input
           type="text"
           placeholder="Search by name"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="border border-gray-300 dark:border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-200"
+          className="border  border-gray-300 dark:border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-200"
         />
         <select
           value={sortOption}
