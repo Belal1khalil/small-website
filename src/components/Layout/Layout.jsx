@@ -1,7 +1,10 @@
+
+import { Outlet } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import { useState, useEffect } from "react";
 
-// eslint-disable-next-line react/prop-types
-export default function Layout({ children }) {
+export default function Layout() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -12,18 +15,17 @@ export default function Layout({ children }) {
     }
   }, [darkMode]);
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-      <header className="flex justify-between items-center p-4 bg-gray-200 dark:bg-gray-800">
-        <h1 className="text-xl font-bold">My Website</h1>
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-4 py-2 rounded"
-        >
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
-      </header>
-      <main className="p-4">{children}</main>
-    </div>
+    <>
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <div className="container w-[100%] pb-10 pt-20 min-h-[75vh] bg-white dark:bg-gray-900 transition-colors duration-300">
+        <Outlet></Outlet>
+      </div>
+      <Footer />
+    </>
   );
 }

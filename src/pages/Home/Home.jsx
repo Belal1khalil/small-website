@@ -77,18 +77,18 @@ export default function Home() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4">
-      {/* الحالة 1: أثناء التحميل */}
+     
       {products.length === 0 ? (
         <div className="flex justify-center items-center w-screen h-screen">
           <Loading />
         </div>
       ) : filteredProducts.length === 0 ? (
-        // الحالة 2: البحث لم يعطِ نتائج
+        
         <div className="col-span-full flex justify-center items-center h-40">
           <h1 className="text-xl font-semibold text-gray-600 dark:text-gray-300">🔍 No products found matching your search.</h1>
         </div>
       ) : (
-        // الحالة 3: عرض المنتجات
+    
         sortedProducts.map((product) => (
           <Card key={product.id} productInfo={product} />
         ))

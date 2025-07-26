@@ -28,7 +28,7 @@ export default function ProductDetails() {
     🛍️ Product Details
   </h1>
 
-  <div className="grid grid-cols-1 md:grid-cols-12 gap-2 px-4 py-6">
+  <div className="grid grid-cols-1 md:grid-cols-12 gap-2 px-4 py-6 ">
     {/* Product Image */}
     <div className="md:col-span-5 flex justify-center items-start">
       <img
